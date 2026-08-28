@@ -1,0 +1,20 @@
+/* main-layout.component.css */
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ocupa a tela inteira */
+  overflow: hidden; /* Impede que a tela inteira role */
+}
+
+.app-header {
+  flex-shrink: 0; /* Impede que o header encolha */
+}
+
+.app-content {
+  flex-grow: 1; /* Ocupa todo o espaço restante do meio */
+  overflow-y: auto; /* Apenas o miolo rola quando o conteúdo for grande */
+}
+
+.app-footer {
+  flex-shrink: 0; /* Impede que o footer encolha */
+}
