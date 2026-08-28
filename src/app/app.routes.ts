@@ -7,19 +7,19 @@ import { Contact } from './components/contact/contact';
 export const routes: Routes = [
   {
     path: '',
-    component: Mainlayout, // Este é o componente que tem o header, footer e o router-outlet
+    component: Mainlayout, 
     children: [
       { 
         path: '', 
-        component: Home // Quando acessar '/', carrega o Mainlayout E o HomeComponent dentro dele
+        component: Home 
       },
       { 
         path: 'sobre', 
-        component: About // Quando acessar '/', carrega o Mainlayout E o HomeComponent dentro dele
+        component: About 
       },
       { 
         path: 'contato', 
-        component: Contact // Quando acessar '/', carrega o Mainlayout E o HomeComponent dentro dele
+        component: Contact 
       },
     //   { 
     //     path: 'produtos', 
