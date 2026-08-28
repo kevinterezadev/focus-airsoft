@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Mainlayout } from './components/mainlayout/mainlayout';
 import { Home } from './components/home/home';
 import { About } from './components/about/about';
+import { Contact } from './components/contact/contact';
 
 export const routes: Routes = [
   {
@@ -13,8 +14,12 @@ export const routes: Routes = [
         component: Home // Quando acessar '/', carrega o Mainlayout E o HomeComponent dentro dele
       },
       { 
-        path: 'about', 
+        path: 'sobre', 
         component: About // Quando acessar '/', carrega o Mainlayout E o HomeComponent dentro dele
+      },
+      { 
+        path: 'contato', 
+        component: Contact // Quando acessar '/', carrega o Mainlayout E o HomeComponent dentro dele
       },
     //   { 
     //     path: 'produtos', 
