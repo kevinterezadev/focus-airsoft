@@ -1,13 +1,15 @@
 import { Routes } from '@angular/router';
-import { Mainlayout } from './components/mainlayout/mainlayout';
+import { Layout } from './components/layout/layout';
 import { Home } from './components/home/home';
 import { About } from './components/about/about';
 import { Contact } from './components/contact/contact';
+import { Produtos } from './components/produtos/produtos';
+import { ProdutoDetalhe } from './components/produto-detalhe/produto-detalhe';
 
 export const routes: Routes = [
   {
     path: '',
-    component: Mainlayout, 
+    component: Layout, 
     children: [
       { 
         path: '', 
@@ -21,14 +23,18 @@ export const routes: Routes = [
         path: 'contato', 
         component: Contact 
       },
-    //   { 
-    //     path: 'produtos', 
-    //     component: ProdutosComponent // Quando acessar '/produtos', carrega o Mainlayout E a tela de produtos
-    //   }
+      {
+        path: 'produtos/:id',
+        component: ProdutoDetalhe
+      },
+      { 
+        path: 'produtos', 
+        component: Produtos
+      },
     ]
   },
-  {
+  { // Se digitar qualquer rota errada, joga de volta pra home
     path: '**', 
-    redirectTo: '' // Se digitar qualquer rota errada, joga de volta pra home
+    redirectTo: '' 
   }
 ];

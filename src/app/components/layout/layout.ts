@@ -4,10 +4,10 @@ import { Footer } from '../footer/footer';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-mainlayout',
+  selector: 'app-layout',
   imports: [Header, Footer, RouterOutlet],
-  templateUrl: './mainlayout.html',
-  styleUrl: './mainlayout.css',
+  templateUrl: './layout.html',
+  styleUrl: './layout.css',
 })
-export class Mainlayout {}
+export class Layout {}
   

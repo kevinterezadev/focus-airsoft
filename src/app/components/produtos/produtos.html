@@ -1,0 +1,44 @@
+<section class="app-products min-h-full max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Nossos Produtos</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        @for (product of productsList; track product.id) {
+        <div
+            class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+
+            <!-- Imagem do Produto -->
+            <div class="h-56 overflow-hidden bg-gray-100 relative">
+                <img [src]="product.image" [alt]="product.name"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+
+            <!-- Conteúdo do Card -->
+            <div class="p-6 flex flex-col flex-grow justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">{{ product.name }}</h3>
+                    <p class="text-2xl font-extrabold text-red-600 mb-6">
+                        R$ {{ product.price }}
+                    </p>
+                </div>
+
+                <!-- Botões de Ação -->
+                <div class="flex items-center gap-3">
+                    <a [routerLink]="['/produtos', product.id]" class="flex-1 bg-gray-100 text-gray-800 font-semibold py-3 px-4 rounded-xl hover:bg-gray-200
+                        transition-colors text-center">
+                        Ver mais
+                    </a>
+
+                    <button class="flex-1 bg-red-600 text-white font-semibold py-3 px-4 rounded-xl hover:bg-red-700
+                        transition-colors shadow-lg shadow-red-100 text-center">
+                        <!-- (click)="adicionarCarrinho(product) --->
+                        Carrinho
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        } @empty {
+        <p class="col-span-full text-center text-gray-500 py-12">Nenhum produto encontrado no momento.</p>
+        }
+    </div>
+</section>
