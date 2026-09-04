@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ContactService } from '../../services/contact-service';
+import { ContactService, IMessage } from '../../services/contact-service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -11,16 +11,27 @@ import { FormsModule } from '@angular/forms';
 })
 export class Contact {
   private contactService = inject(ContactService)
-  nameFormField =  '';
-  emailFormField =  '';
-  messageFormField =  '';
+  dataForm: IMessage = {
+    name:  '',
+    email:  '',
+    message:  ''
+  }
+  formSubmitted: boolean = false;
 
-  saveMessage() {
-    const message = {
-      name: this.nameFormField,
-      email: this.emailFormField,
-      message: this.messageFormField,
+  onSubmit(f: any) {
+    this.formSubmitted = true; 
+
+    if (f.invalid) {
+      return; 
     }
-    this.contactService.pushMessage(message)
+
+    this.contactService.pushMessage(this.dataForm);
+    
+    f.resetForm();
+    this.formSubmitted = false;
+    
+    this.dataForm.name = '';
+    this.dataForm.email = '';
+    this.dataForm.message = '';
   }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-interface Message {
+export interface IMessage {
   name: string,
   email: string,
   message: string
@@ -13,14 +13,14 @@ interface Message {
 
 
 export class ContactService {
-  contactItem: Message = {
+  contactItem: IMessage = {
     name: '',
     email: '',
     message: ''
   }
 
 
-  pushMessage(message: Message) {
+  pushMessage(message: IMessage) {
     const formatedMessage = `
     Nome: ${message.name}
     E-mail: ${message.email}
