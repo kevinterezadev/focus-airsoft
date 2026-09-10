@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { CartService } from '../../services/cart-service';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +8,7 @@ import { RouterLink } from "@angular/router";
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
-export class Header {}
+export class Header {
+  private readonly _cartService = inject(CartService);
+  readonly cartBadge = () => this._cartService.cartCounter();
+}

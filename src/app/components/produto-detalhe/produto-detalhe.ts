@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute , RouterLink } from '@angular/router';
 import { ProductsService } from '../../services/products-service';
+import { CartService } from '../../services/cart-service';
 
 @Component({
   selector: 'app-produto-detalhe',
@@ -9,8 +10,10 @@ import { ProductsService } from '../../services/products-service';
   styleUrl: './produto-detalhe.css',
 })
 export class ProdutoDetalhe implements OnInit {
+
   private route = inject(ActivatedRoute);
   private _productsService = inject(ProductsService);
+  private _cartService = inject(CartService);
 
   product: any
 
@@ -21,5 +24,9 @@ export class ProdutoDetalhe implements OnInit {
 
       this.product = this._productsService.getProductById(productId);
     });
+  }
+
+  addToCart() {
+    this._cartService.addToCart();
   }
 }

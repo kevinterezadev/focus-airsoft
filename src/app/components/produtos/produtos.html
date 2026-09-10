@@ -29,8 +29,7 @@
                     </a>
 
                     <button class="flex-1 bg-red-600 text-white font-semibold py-3 px-4 rounded-xl hover:bg-red-700
-                        transition-colors shadow-lg shadow-red-100 text-center">
-                        <!-- (click)="adicionarCarrinho(product) --->
+                        transition-colors shadow-lg shadow-red-100 text-center" (click)="addToCart()">
                         Carrinho
                     </button>
                 </div>
@@ -38,7 +37,7 @@
 
         </div>
         } @empty {
-        <p class="col-span-full text-center text-gray-500 py-12">Nenhum produto encontrado no momento.</p>
+        <p class=" col-span-full text-center text-gray-500 py-12">Nenhum produto encontrado no momento.</p>
         }
     </div>
 </section>
