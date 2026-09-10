@@ -1,59 +1,51 @@
-# FocusAirsoft
+# 🔫 FocusAirsoft
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.9.
+O FocusAirsoft é um e-commerce simulado de equipamentos e acessórios de airsoft, desenvolvido como projeto de avaliação do meu curso. O foco principal do projeto foi a aplicação prática da arquitetura do Angular, com forte ênfase no uso de Services para gerenciamento de estado da aplicação e comunicação de dados entre componentes.
 
-## Development server
+## 🚀 Tecnologias Utilizadas
 
-To start a local development server, run:
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" width="24px"/> **Angular** → Framework utilitário utilizado para a estruturação modular e componentização da loja, além do gerenciamento de rotas e injeção de dependência. Destaca-se o uso de Services como núcleo do projeto, responsáveis por centralizar o gerenciamento de estado da aplicação (como fluxo de carrinho e catálogo) e intermediar a comunicação de dados entre componentes de forma desacoplada.
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg" width="24px"/> **Tailwind CSS** → Framework utilitário de CSS utilizado para a estilização ágil dos componentes da interface.
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="24px"/> **TypeScript** → Linguagem base utilizada para tipagem estática e implementação da lógica de dados dos services e componentes.
 
-```bash
-ng serve
-```
+## 🖼️ Demonstração
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+![Demonstração do Projeto](./src/assets/images/github-readme.jpg)
 
-## Code scaffolding
+## 🔗 Link para o Deploy
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+[Acesse o projeto na Vercel](https://focus-airsoft.vercel.app/)
 
-```bash
-ng generate component component-name
-```
+## 🔧 Rodar localmente
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Caso queira visualizar ou modificar o código localmente:
 
-```bash
-ng generate --help
-```
+1. **Clone o repositório:**
 
-## Building
+   ```bash
+   git clone https://github.com/kevinterezadev/focus-airsoft.git
+   ```
 
-To build the project run:
+2. **Acesse o diretório do projeto:**
 
-```bash
-ng build
-```
+   ```bash
+   cd focus-airsoft
+   ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+3. **Instale as dependências:**
 
-## Running unit tests
+   ```bash
+   npm install
+   ```
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+4. **Execute o servidor de desenvolvimento:**
 
-```bash
-ng test
-```
+   ```bash
+   ng serve
+   ```
 
-## Running end-to-end tests
+5. **Navegue até `http://localhost:4200/` para visualizar o e-commerce.**
 
-For end-to-end (e2e) testing, run:
+## 📄 Licença
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este é um projeto de estudo, criado com fins de aprendizado e sem fins comerciais.
